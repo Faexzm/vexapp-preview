@@ -1,0 +1,17 @@
+{
+  "name": "VexApp",
+  "short_name": "VexApp",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#071523",
+  "theme_color": "#071523",
+  "icons": [
+    {
+      "src": "/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

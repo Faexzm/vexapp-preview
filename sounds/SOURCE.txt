@@ -1,0 +1,10 @@
+VexApp Message Sent Sound
+
+Asset: Bubbly Message Sent Whoosh 12
+Source: https://sfxmint.com/sets/chat-app
+File: https://sfxmint.com/dl/ui-send-12.mp3
+License: CC0 1.0 Universal
+Duration: approximately 0.285 seconds
+
+Integrated for successful outgoing text and media messages.
+Playback is optional and does not block message delivery.

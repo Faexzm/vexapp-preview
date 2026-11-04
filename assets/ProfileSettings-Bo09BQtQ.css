@@ -1,0 +1,3157 @@
+.vexeco {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  min-width: 0;
+  color: var(--text-primary, #f5f7fa);
+}
+
+.vexeco-balance-card,
+.vexeco-subscription-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 23px;
+  overflow: hidden;
+  border: 1px solid rgba(92, 173, 255, .2);
+  border-radius: 19px;
+  background:
+    radial-gradient(ellipse at 90% 0%, rgba(41, 151, 255, .20), transparent 58%),
+    linear-gradient(140deg, rgba(22, 44, 68, .95), rgba(15, 23, 34, .98));
+}
+
+.vexeco-balance-card > strong {
+  font-size: clamp(27px, 7vw, 36px);
+  font-weight: 850;
+  letter-spacing: -.045em;
+  overflow-wrap: anywhere;
+}
+
+.vexeco-eyebrow {
+  color: #8dc9ff;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .16em;
+}
+
+.vexeco-muted,
+.vexeco-footnote {
+  color: #9ba9b7;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.vexeco-status {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 750;
+}
+
+.vexeco-status.active {
+  color: #9bd1ff;
+  background: rgba(50, 153, 255, .14);
+  border: 1px solid rgba(80, 175, 255, .28);
+}
+
+.vexeco-status.inactive {
+  color: #c1c6ce;
+  background: rgba(150, 160, 170, .10);
+  border: 1px solid rgba(150, 160, 170, .16);
+}
+
+.vexeco-card {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: 17px;
+  background: rgba(255, 255, 255, .025);
+}
+
+.vexeco-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.vexeco-section-heading h3,
+.vexeco-card h4 {
+  margin: 0;
+  color: #f4f7fb;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.vexeco-section-heading > span {
+  color: #a6b1be;
+  font-size: 11px;
+  text-align: right;
+}
+
+.vexeco-card p {
+  margin: 0;
+  color: #aeb8c3;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.vexeco-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vexeco-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #c8d2dc;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.vexeco-form input {
+  width: 100%;
+  min-width: 0;
+  min-height: 45px;
+  padding: 11px 13px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 11px;
+  outline: none;
+  color: #f5f7fa;
+  background: rgba(0, 0, 0, .17);
+  font: inherit;
+}
+
+.vexeco-form input:focus {
+  border-color: rgba(87, 174, 255, .75);
+}
+
+.vexeco-primary,
+.vexeco-secondary {
+  min-height: 43px;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 11px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.vexeco-primary {
+  color: #fff;
+  background: linear-gradient(110deg, #267edc, #398fe9);
+}
+
+.vexeco-secondary {
+  color: #a9d7ff;
+  background: rgba(58, 149, 231, .15);
+  border: 1px solid rgba(80, 167, 244, .24);
+}
+
+.vexeco-primary:disabled,
+.vexeco-secondary:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.vexeco-refresh,
+.vexeco-purchase-row button {
+  padding: 6px 9px;
+  border: 1px solid rgba(255, 255, 255, .11);
+  border-radius: 8px;
+  color: #a9d7ff;
+  background: rgba(255, 255, 255, .04);
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.vexeco-code-result {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid rgba(64, 172, 255, .25);
+  border-radius: 12px;
+  background: rgba(42, 137, 210, .08);
+}
+
+.vexeco-code-result > span {
+  color: #93caff;
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .12em;
+}
+
+.vexeco-code-result code,
+.vexeco-purchase-row code {
+  overflow-wrap: anywhere;
+  color: #f1f7ff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .07em;
+}
+
+.vexeco-purchase-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.vexeco-purchase-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .035);
+}
+
+.vexeco-purchase-row small {
+  grid-column: 1 / -1;
+  color: #8997a6;
+  font-size: 10px;
+}
+
+.vexeco-transactions {
+  display: flex;
+  flex-direction: column;
+}
+
+.vexeco-transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .075);
+}
+
+.vexeco-transaction:last-child {
+  border-bottom: 0;
+}
+
+.vexeco-transaction > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.vexeco-transaction strong {
+  color: #e8edf3;
+  font-size: 12px;
+}
+
+.vexeco-transaction small {
+  color: #8e9ba9;
+  font-size: 10px;
+}
+
+.vexeco-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.vexeco-amount.positive {
+  color: #69dba7;
+}
+
+.vexeco-amount.negative {
+  color: #ff9b9b;
+}
+
+.vexeco-empty,
+.vexeco-message {
+  padding: 15px;
+  color: #a0adba;
+  font-size: 12px;
+  text-align: center;
+}
+
+.vexeco-alert {
+  padding: 11px 13px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.vexeco-error {
+  color: #ffb5b5;
+  border: 1px solid rgba(255, 100, 100, .2);
+  background: rgba(160, 45, 45, .12);
+}
+
+.vexeco-success {
+  color: #9ce7bd;
+  border: 1px solid rgba(85, 210, 145, .2);
+  background: rgba(45, 150, 95, .11);
+}
+
+.vexeco-subscription-card {
+  align-items: flex-start;
+  border-color: rgba(70, 157, 255, .25);
+}
+
+.vexeco-subscription-symbol {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  border: 1px solid rgba(100, 184, 255, .35);
+  border-radius: 17px;
+  color: #a7d8ff;
+  background: rgba(53, 145, 235, .17);
+  font-size: 29px;
+}
+
+.vexeco-subscription-card h2 {
+  margin: 0;
+  color: #f5f8fc;
+  font-size: 22px;
+  font-weight: 850;
+}
+
+.vexeco-subscription-card > strong {
+  color: #b5dcff;
+  font-size: 26px;
+}
+
+.vexeco-subscription-card > strong small {
+  color: #9ba9b7;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.vexeco-subscription-card p {
+  margin: 0;
+  color: #aab8c8;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.vexeco-date {
+  display: block;
+  margin-top: 6px;
+  color: #dcecff;
+  font-size: 13px;
+}
+
+.vexeco-footnote {
+  margin: 0;
+  padding: 0 4px;
+}
+
+@media (max-width: 420px) {
+  .vexeco-balance-card,
+  .vexeco-subscription-card {
+    padding: 18px;
+  }
+
+  .vexeco-card {
+    padding: 14px;
+  }
+
+  .vexeco-transaction {
+    align-items: flex-start;
+  }
+}
+
+
+/* VEX_ECONOMY_GLASS_POLISH_V1 */
+.vexeco {
+  gap: 16px;
+}
+
+.vexeco-notice-area:empty {
+  display: none;
+}
+
+.vexeco-balance-card,
+.vexeco-subscription-card {
+  border-color: rgba(100, 190, 245, .25);
+  background:
+    radial-gradient(ellipse at 92% 0%, rgba(58, 164, 255, .20), transparent 58%),
+    linear-gradient(145deg, rgba(13, 39, 59, .76), rgba(10, 21, 34, .68));
+  -webkit-backdrop-filter: blur(23px) saturate(145%);
+  backdrop-filter: blur(23px) saturate(145%);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, .16), inset 0 1px 0 rgba(255,255,255,.09);
+}
+
+.vexeco-card {
+  border-color: rgba(140, 190, 220, .13);
+  background: rgba(9, 23, 35, .42);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  backdrop-filter: blur(18px) saturate(135%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.035);
+}
+
+.vexeco-section-heading {
+  flex-wrap: wrap;
+}
+
+.vexeco-form input {
+  box-sizing: border-box;
+  border-color: rgba(145, 190, 220, .20);
+  background: rgba(3, 12, 22, .30);
+  transition: border-color .18s ease, background .18s ease, box-shadow .18s ease;
+}
+
+.vexeco-form input:focus {
+  border-color: rgba(83, 177, 255, .82);
+  background: rgba(5, 20, 34, .56);
+  box-shadow: 0 0 0 3px rgba(55, 145, 225, .13);
+}
+
+.vexeco-primary {
+  box-shadow: 0 7px 18px rgba(34, 125, 220, .16), inset 0 1px 0 rgba(255,255,255,.15);
+  transition: transform .18s ease, filter .18s ease, box-shadow .18s ease;
+}
+
+.vexeco-primary:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(34, 125, 220, .22), inset 0 1px 0 rgba(255,255,255,.18);
+}
+
+.vexeco-refresh:disabled,
+.vexeco-primary:disabled {
+  opacity: .52;
+}
+
+.vexeco-balance-hint {
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 190, 95, .19);
+  border-radius: 10px;
+  color: #f0c98f !important;
+  background: rgba(150, 95, 25, .10);
+}
+
+.vexeco-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 115px;
+  color: #b8c9d8;
+  font-size: 13px;
+}
+
+.vexeco-loading-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #69c5ff;
+  box-shadow: 0 0 14px rgba(75, 175, 255, .55);
+  animation: vexeco-pulse 1.15s ease-in-out infinite alternate;
+}
+
+@keyframes vexeco-pulse {
+  from { opacity: .45; transform: scale(.78); }
+  to { opacity: 1; transform: scale(1.12); }
+}
+
+@media (max-width: 420px) {
+  .vexeco-balance-card,
+  .vexeco-subscription-card {
+    padding: 17px;
+    border-radius: 17px;
+  }
+
+  .vexeco-transaction {
+    gap: 8px;
+  }
+
+  .vexeco-amount {
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vexeco-loading-dot { animation: none; }
+  .vexeco-primary { transition: none; }
+}
+
+/* VEX_SUBSCRIPTION_BENEFITS_V1 — benefits and roadmap cards. */
+.vexeco-benefit-card {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 17px;
+  border: 1px solid rgba(91, 177, 255, .22);
+  border-radius: 17px;
+  background: radial-gradient(ellipse at 100% 0%, rgba(89, 155, 255, .12), transparent 58%), rgba(255, 255, 255, .025);
+}
+.vexeco-benefit-row {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  padding: 11px;
+  border: 1px solid rgba(255, 255, 255, .07);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .025);
+}
+.vexeco-benefit-icon {
+  display: grid;
+  width: 32px; height: 32px; place-items: center;
+  border-radius: 10px; color: #a9d7ff;
+  background: rgba(69, 150, 232, .15); font-size: 18px;
+}
+.vexeco-benefit-row > div { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.vexeco-benefit-row strong { color: #eaf4ff; font-size: 12px; }
+.vexeco-benefit-row small { color: #9ba9b7; font-size: 10px; line-height: 1.45; }
+.vexeco-benefit-state { color: #a8d7ff; font-size: 10px; font-weight: 800; }
+.vexeco-benefit-note { color: #9ba9b7; font-size: 11px; line-height: 1.55; margin: 0; }
+.vexeco-roadmap-card { border-style: dashed; }
+.vexeco-roadmap-card p { line-height: 1.65; }
+@media (max-width: 390px) {
+  .vexeco-benefit-row { grid-template-columns: 30px minmax(0, 1fr); }
+  .vexeco-benefit-state { grid-column: 2; }
+}
+
+
+/* VEX_REDEEM_REWARDS_V1 */
+.vexeco-redeem-card {
+  border-color: rgba(89, 170, 255, .24);
+  background:
+    radial-gradient(ellipse at 95% 0%, rgba(72, 155, 255, .14), transparent 58%),
+    rgba(9, 23, 35, .42);
+}
+.vexeco-redeem-card > p {
+  margin: 0;
+  color: #a9bacb;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.vexeco-redeem-card .vexeco-footnote {
+  color: #8195a8;
+  font-size: 10px;
+}
+
+
+/* VEX_WALLET_REAL_WALLET_UI_V1 */
+.vexeco-wallet-hero {
+  min-height: 188px;
+  padding: 20px 21px 17px;
+  gap: 0;
+  border-color: rgba(111, 190, 255, .34);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(91, 180, 255, .27), transparent 36%),
+    radial-gradient(circle at 8% 110%, rgba(117, 100, 255, .20), transparent 43%),
+    linear-gradient(137deg, #123c63 0%, #102d4b 48%, #101a35 100%);
+  box-shadow: 0 18px 42px rgba(2, 14, 31, .24),
+    inset 0 1px 0 rgba(255,255,255,.16);
+}
+
+.vexeco-wallet-topline,
+.vexeco-wallet-brand,
+.vexeco-wallet-balance-label,
+.vexeco-wallet-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.vexeco-wallet-brand { justify-content: flex-start; }
+
+.vexeco-wallet-mark {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 13px;
+  color: #fff;
+  background: linear-gradient(145deg, rgba(255,255,255,.22), rgba(255,255,255,.07));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+  font-size: 21px;
+  font-weight: 950;
+}
+
+.vexeco-wallet-brand > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.vexeco-wallet-brand .vexeco-eyebrow {
+  color: #d3eaff;
+  font-size: 11px;
+}
+
+.vexeco-wallet-brand small {
+  color: rgba(226,241,255,.66);
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: .12em;
+}
+
+.vexeco-wallet-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 9px;
+  border: 1px solid rgba(128,235,190,.24);
+  border-radius: 999px;
+  color: #baf7dc;
+  background: rgba(28,160,112,.14);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.vexeco-wallet-live i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #66e3aa;
+  box-shadow: 0 0 9px rgba(102,227,170,.75);
+}
+
+.vexeco-wallet-live.inactive {
+  color: #ffd3a5;
+  border-color: rgba(255,190,120,.22);
+  background: rgba(170,100,35,.13);
+}
+
+.vexeco-wallet-live.inactive i {
+  background: #ffb56f;
+  box-shadow: none;
+}
+
+.vexeco-wallet-balance-label {
+  margin-top: 23px;
+  color: rgba(232,244,255,.72);
+  font-size: 11px;
+}
+
+.vexeco-balance-toggle {
+  padding: 4px 7px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 7px;
+  color: #d5eaff;
+  background: rgba(255,255,255,.07);
+  font: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.vexeco-wallet-hero > .vexeco-wallet-amount {
+  display: block;
+  margin-top: 6px;
+  color: #fff;
+  font-size: clamp(27px, 7.2vw, 37px);
+  font-weight: 850;
+  letter-spacing: -.045em;
+  line-height: 1.16;
+  font-variant-numeric: tabular-nums;
+}
+
+.vexeco-wallet-card-footer {
+  margin-top: auto;
+  padding-top: 17px;
+  color: rgba(219,237,255,.63);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.vexeco-wallet-card-footer i {
+  padding: 0 3px;
+  color: #8fc9ff;
+  font-style: normal;
+}
+
+.vexeco-wallet-card-footer b { color: #cce6ff; }
+
+.vexeco-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+  padding: 13px 10px;
+  border: 1px solid rgba(140,190,220,.13);
+  border-radius: 18px;
+  background: rgba(9,23,35,.34);
+  -webkit-backdrop-filter: blur(16px) saturate(130%);
+  backdrop-filter: blur(16px) saturate(130%);
+}
+
+.vexeco-quick-action {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 5px 2px;
+  border: 0;
+  border-radius: 12px;
+  color: #dceaf7;
+  background: transparent;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background .18s ease, transform .18s ease;
+}
+
+.vexeco-quick-action:hover {
+  background: rgba(105,174,235,.09);
+  transform: translateY(-1px);
+}
+
+.vexeco-quick-action:focus-visible,
+.vexeco-balance-toggle:focus-visible,
+.vexeco-transfer-close:focus-visible {
+  outline: 2px solid #83c7ff;
+  outline-offset: 3px;
+}
+
+.vexeco-quick-icon {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  place-items: center;
+  border: 1px solid rgba(140,195,235,.2);
+  border-radius: 15px;
+  color: #bde3ff;
+  background: linear-gradient(145deg, rgba(69,152,224,.22), rgba(51,95,151,.13));
+  font-size: 23px;
+  font-weight: 650;
+  line-height: 1;
+}
+
+.vexeco-quick-icon.topup {
+  color: #b7f0d7;
+  border-color: rgba(113,219,172,.2);
+  background: rgba(42,153,108,.13);
+}
+
+.vexeco-quick-icon.activation {
+  color: #e2d2ff;
+  border-color: rgba(176,142,255,.2);
+  background: rgba(125,91,195,.14);
+}
+
+.vexeco-quick-icon.history {
+  color: #f4d8ac;
+  border-color: rgba(235,184,112,.2);
+  background: rgba(181,126,52,.12);
+}
+
+.vexeco-transfer-overlay {
+  position: fixed;
+  z-index: 100000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(2,8,17,.72);
+  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(13px);
+}
+
+.vexeco-transfer-dialog {
+  display: flex;
+  width: min(100%, 440px);
+  max-height: min(88dvh, 720px);
+  flex-direction: column;
+  gap: 17px;
+  overflow: auto;
+  padding: 21px;
+  border: 1px solid rgba(119,190,245,.27);
+  border-radius: 22px;
+  color: #eef6ff;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(64,145,224,.16), transparent 52%),
+    rgba(11,25,40,.97);
+  box-shadow: 0 24px 70px rgba(0,0,0,.48),
+    inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.vexeco-transfer-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.vexeco-transfer-header h3 {
+  margin: 5px 0 4px;
+  color: #f5f9ff;
+  font-size: 21px;
+  font-weight: 850;
+  letter-spacing: -.025em;
+}
+
+.vexeco-transfer-header p {
+  margin: 0;
+  color: #a9bacb;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.vexeco-transfer-close {
+  display: grid;
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 11px;
+  color: #d7e7f7;
+  background: rgba(255,255,255,.06);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.vexeco-transfer-close:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.vexeco-transfer-balance {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 13px 14px;
+  border: 1px solid rgba(105,174,235,.17);
+  border-radius: 13px;
+  color: #a9c0d5;
+  background: rgba(71,139,203,.09);
+  font-size: 11px;
+}
+
+.vexeco-transfer-balance strong {
+  color: #e7f4ff;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.vexeco-transfer-form { gap: 14px; }
+
+.vexeco-transfer-form input {
+  min-height: 49px;
+  border-radius: 12px;
+}
+
+.vexeco-transfer-note {
+  margin: 0;
+  color: #8fa5ba;
+  font-size: 10px;
+  line-height: 1.55;
+}
+
+.vexeco-transfer-submit {
+  min-height: 48px;
+  border-radius: 13px;
+  font-size: 13px;
+}
+
+#vexeco-activation,
+#vexeco-history,
+#vexeco-redeem {
+  scroll-margin-top: 18px;
+}
+
+@media (max-width: 420px) {
+  .vexeco-wallet-hero {
+    min-height: 178px;
+    padding: 18px;
+    border-radius: 19px;
+  }
+
+  .vexeco-wallet-balance-label { margin-top: 21px; }
+
+  .vexeco-quick-actions {
+    gap: 4px;
+    padding: 11px 6px;
+    border-radius: 15px;
+  }
+
+  .vexeco-quick-action {
+    gap: 7px;
+    font-size: 9px;
+  }
+
+  .vexeco-quick-icon {
+    width: 39px;
+    height: 39px;
+    border-radius: 13px;
+    font-size: 21px;
+  }
+
+  .vexeco-transfer-dialog {
+    padding: 18px;
+    border-radius: 19px;
+  }
+}
+
+@media (max-width: 350px) {
+  .vexeco-quick-actions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .vexeco-quick-action {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 7px;
+  }
+
+  .vexeco-quick-icon {
+    width: 35px;
+    height: 35px;
+    flex: 0 0 35px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vexeco-quick-action { transition: none; }
+}
+
+/* VEXAPP GOLD SUBSCRIPTION VISUALS V1 */
+.vexeco-subscription-card {
+  border-color: rgba(231, 185, 83, .42) !important;
+  background:
+    radial-gradient(
+      ellipse at 92% 0%,
+      rgba(235, 183, 67, .22),
+      transparent 58%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(57, 42, 20, .76),
+      rgba(23, 21, 20, .88)
+    ) !important;
+}
+.vexeco-subscription-card .vexeco-subscription-symbol {
+  color: #ffdf88 !important;
+  border-color: rgba(255, 215, 125, .52) !important;
+  background: linear-gradient(
+    145deg,
+    rgba(247, 201, 100, .28),
+    rgba(145, 91, 23, .30)
+  ) !important;
+  box-shadow:
+    0 0 24px rgba(227, 174, 62, .18),
+    inset 0 1px 0 rgba(255,255,255,.24) !important;
+}
+.vexeco-subscription-card > strong {
+  color: #ffe1a0 !important;
+}
+.vexeco-benefit-card {
+  border-color: rgba(226, 181, 82, .24) !important;
+}
+.vexeco-benefit-icon-gold {
+  color: #ffe5a2 !important;
+  background: rgba(210, 157, 49, .17) !important;
+}
+.vexeco-benefit-state-gold {
+  color: #f7d782 !important;
+}
+.vcs-page { display:grid; gap:14px; width:100%; min-width:0; padding:2px 0 28px; color:#edf5f8; }
+.vcs-hero { display:flex; align-items:center; gap:13px; padding:15px; border:1px solid rgba(92,190,215,.14); border-radius:19px; background:linear-gradient(140deg,#0b1921,#060b10 72%); }
+.vcs-hero-icon { display:grid; flex:0 0 48px; width:48px; height:48px; place-items:center; border:1px solid rgba(50,211,238,.32); border-radius:15px; color:#35d9ef; background:rgba(24,169,198,.10); }
+.vcs-hero > div:nth-child(2) { flex:1; min-width:0; }
+.vcs-eyebrow { color:#53cfe1; font-size:9px; font-weight:850; letter-spacing:.16em; }
+.vcs-hero h2 { margin:3px 0 2px; color:#fff; font-size:21px; font-weight:850; letter-spacing:-.035em; }
+.vcs-hero p,.vcs-section-heading p,.vcs-files-heading p { margin:0; color:#91a4ad; font-size:11px; line-height:1.5; }
+.vcs-refresh { display:grid; flex:0 0 35px; width:35px; height:35px; place-items:center; border:1px solid rgba(143,177,191,.15); border-radius:50%; color:#bddce4; background:#0a151c; font-size:21px; }
+.vcs-usage-card,.vcs-backup-card { min-width:0; padding:16px; border:1px solid rgba(127,164,181,.15); border-radius:18px; background:#070d12; }
+.vcs-usage-top { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.vcs-usage-top span { color:#9eb1ba; font-size:12px; }
+.vcs-usage-top strong { color:#fff; font-size:25px; font-weight:850; font-variant-numeric:tabular-nums; letter-spacing:-.04em; }
+.vcs-usage-bar { display:flex; height:7px; margin:14px 0 13px; overflow:hidden; border-radius:99px; background:#14232b; }
+.vcs-usage-bar span { display:block; height:100%; transition:width .25s ease; }
+.vcs-usage-bar .vcs-bar-chat { background:linear-gradient(90deg,#16b8d1,#56e4f5); }
+.vcs-usage-bar .vcs-bar-media { background:linear-gradient(90deg,#7182e8,#a0a9ff); }
+.vcs-usage-breakdown { display:grid; gap:9px; }
+.vcs-usage-breakdown > div { display:grid; grid-template-columns:8px minmax(0,1fr) auto; align-items:center; gap:8px; color:#a8b8bf; font-size:11px; }
+.vcs-usage-breakdown strong { color:#e8f1f4; font-size:11px; font-variant-numeric:tabular-nums; }
+.vcs-dot { width:7px; height:7px; border-radius:50%; background:#38cfe2; }
+.vcs-dot-media { background:#8a9bff; }
+.vcs-usage-card > small { display:block; margin-top:12px; color:#71858e; font-size:10px; }
+.vcs-section-heading,.vcs-files-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; margin-bottom:14px; }
+.vcs-section-heading h3,.vcs-files-heading h3 { margin:0 0 4px; color:#f5fafb; font-size:15px; font-weight:800; }
+.vcs-plan-pill { flex:0 0 auto; padding:5px 8px; border:1px solid rgba(121,163,180,.19); border-radius:99px; color:#b6c8ce; background:#101a21; font-size:9px; font-weight:750; }
+.vcs-plan-pill.is-premium { border-color:rgba(42,207,228,.28); color:#56ddeb; background:rgba(20,126,147,.12); }
+.vcs-password-field { display:grid; gap:7px; margin-bottom:10px; }
+.vcs-password-field span { color:#a8b9c0; font-size:11px; font-weight:700; }
+.vcs-password-field input { width:100%; min-width:0; min-height:44px; padding:0 12px; border:1px solid rgba(129,172,190,.22); border-radius:12px; outline:none; color:#f4fafc; background:#03080d; font:inherit; font-size:13px; }
+.vcs-password-field input:focus-visible { border-color:#32cde2; box-shadow:0 0 0 2px rgba(50,205,226,.12); }
+.vcs-password-field input::placeholder { color:#60747d; }
+.vcs-security-note { margin:8px 0 12px; color:#788d96; font-size:10px; line-height:1.55; }
+.vcs-primary-button { display:flex; align-items:center; justify-content:center; width:100%; min-height:44px; padding:10px 14px; border:1px solid rgba(30,207,230,.45); border-radius:13px; color:#001116; background:linear-gradient(110deg,#31d9ed,#16bfd7); font-size:12px; font-weight:850; }
+.vcs-primary-button:disabled,.vcs-refresh:disabled { cursor:not-allowed; opacity:.45; }
+.vcs-secondary-action { color:#dffaff; background:#0c222a; }
+.vcs-locked-note { display:grid; gap:5px; padding:13px; border:1px dashed rgba(142,167,180,.22); border-radius:13px; background:#0b1117; }
+.vcs-locked-note strong { color:#d9e9ed; font-size:12px; }
+.vcs-locked-note span { color:#82949c; font-size:10px; line-height:1.5; }
+.vcs-feedback { padding:11px 12px; border:1px solid rgba(44,195,215,.22); border-radius:12px; color:#94e9f2; background:rgba(19,115,133,.12); font-size:11px; line-height:1.5; overflow-wrap:anywhere; }
+.vcs-feedback.is-error { border-color:rgba(255,113,129,.25); color:#ffb0b9; background:rgba(140,35,48,.12); }
+.vcs-files-heading { align-items:center; margin-bottom:8px; }
+.vcs-files-heading > span { display:grid; min-width:28px; height:28px; padding:0 7px; place-items:center; border-radius:99px; color:#9debf3; background:#10252d; font-size:11px; font-weight:800; }
+.vcs-empty { display:grid; gap:6px; padding:19px 14px; border:1px dashed rgba(137,166,179,.17); border-radius:14px; color:#82949d; background:#060b10; font-size:11px; text-align:center; }
+.vcs-empty strong { color:#d7e5e9; font-size:12px; }
+.vcs-file-list { display:grid; gap:8px; }
+.vcs-file-row { display:flex; align-items:center; gap:10px; min-width:0; padding:11px 10px; border:1px solid rgba(122,156,171,.12); border-radius:13px; background:#070d12; }
+.vcs-file-icon { display:grid; flex:0 0 37px; width:37px; height:37px; place-items:center; border-radius:11px; color:#62d8e9; background:rgba(27,155,177,.12); font-size:20px; }
+.vcs-file-icon.is-media { color:#b1b9ff; background:rgba(103,113,198,.13); }
+.vcs-file-copy { display:grid; flex:1; gap:3px; min-width:0; }
+.vcs-file-copy strong { color:#e6f0f3; font-size:11px; }
+.vcs-file-copy small { overflow-wrap:anywhere; color:#82959d; font-size:9px; line-height:1.4; }
+.vcs-file-actions { display:flex; flex:0 0 auto; gap:5px; }
+.vcs-file-actions button { display:grid; width:31px; height:31px; place-items:center; border:1px solid rgba(127,164,181,.16); border-radius:9px; color:#b8d0d8; background:#0d171e; font-size:17px; }
+.vcs-file-actions button:last-child { color:#ff9aa7; }
+.vcs-file-actions button:disabled { opacity:.4; }
+.vcs-footer-note { margin:0 2px; color:#70828a; font-size:9px; line-height:1.55; }
+@media (min-width:680px) { .vcs-page { max-width:700px; margin:0 auto; } .vcs-usage-card,.vcs-backup-card { padding:19px; } }
+/* VEXAPP_WHATSAPP_SETTINGS_PAGE_V1 */
+
+.vps-settings-page,
+.vps-settings-page * {
+  box-sizing: border-box;
+}
+
+.vps-settings-page {
+  display: block;
+  width: 100%;
+  max-width: 780px;
+  min-width: 0;
+  margin: 0 auto;
+  padding: 4px 2px 35px;
+  color: #f2f2f2;
+}
+
+.vps-home-header {
+  padding: 18px 4px 13px;
+}
+
+.vps-eyebrow {
+  color: #a2a2a2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.vps-home-header h1 {
+  margin: 5px 0 0;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -.035em;
+}
+
+.vps-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  min-width: 0;
+  margin: 5px 0 19px;
+  padding: 15px 10px;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  border-radius: 0;
+  color: #fff;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.vps-profile-card:disabled {
+  cursor: default;
+  opacity: .8;
+}
+
+.vps-profile-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.vps-profile-avatar {
+  display: grid;
+  flex: 0 0 63px;
+  width: 63px;
+  height: 63px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  color: #fff;
+  background: #292929;
+  font-size: 25px;
+  font-weight: 750;
+}
+
+.vps-profile-copy {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.vps-profile-copy strong {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  overflow: hidden;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vps-profile-copy small {
+  overflow: hidden;
+  color: #a1a1a1;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vps-profile-hint {
+  color: #888;
+  font-size: 11px;
+}
+
+.vps-verified {
+  display: inline-grid;
+  flex: 0 0 19px;
+  width: 19px;
+  height: 19px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #2586ed;
+  font-size: 12px;
+}
+
+.vps-profile-card > svg {
+  flex: 0 0 18px;
+  color: #777;
+}
+
+.vps-category-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.vps-category-row {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  width: 100%;
+  min-width: 0;
+  min-height: 77px;
+  padding: 12px 9px;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,.075);
+  border-radius: 0;
+  color: #f4f4f4;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background .16s ease, transform .16s ease;
+}
+
+.vps-category-row:active {
+  background: rgba(255,255,255,.055);
+  transform: scale(.992);
+}
+
+.vps-category-icon {
+  display: grid;
+  flex: 0 0 43px;
+  width: 43px;
+  height: 43px;
+  place-items: center;
+  color: #9ca3a8;
+}
+
+.vps-category-copy {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.vps-category-copy strong {
+  color: #f3f3f3;
+  font-size: 15px;
+  font-weight: 730;
+  line-height: 1.3;
+}
+
+.vps-category-copy small {
+  color: #94999d;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.vps-category-row > svg {
+  flex: 0 0 17px;
+  color: #777e82;
+}
+
+.vps-home-sync {
+  margin: 18px 5px 0;
+  color: #858b90;
+  font-size: 10px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.vps-detail-view {
+  width: 100%;
+  min-width: 0;
+}
+
+.vps-detail-header {
+  position: sticky;
+  top: -5px;
+  z-index: 5;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin: 0 0 17px;
+  padding: 16px 5px 15px;
+  border-bottom: 1px solid rgba(255,255,255,.09);
+  background: #0b1013;
+}
+
+.vps-back-button {
+  display: grid;
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: #f4f4f4;
+  background: transparent;
+  cursor: pointer;
+}
+
+.vps-detail-title {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.vps-detail-title > span {
+  color: #8e969a;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.vps-detail-title h1 {
+  margin: 4px 0 3px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 780;
+}
+
+.vps-detail-title p {
+  margin: 0;
+  color: #92999e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.vps-detail-content {
+  min-width: 0;
+  padding: 0 5px 28px;
+}
+
+.vps-info-card,
+.vps-warning-card {
+  margin: 0 0 14px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 14px;
+  background: #14191d;
+}
+
+.vps-info-card h3,
+.vps-warning-card strong {
+  display: block;
+  margin: 0 0 9px;
+  color: #f4f4f4;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.vps-info-card p,
+.vps-warning-card p {
+  margin: 0 0 11px;
+  color: #a4aaae;
+  font-size: 12px;
+  line-height: 1.65;
+}
+
+.vps-info-card p:last-child,
+.vps-warning-card p:last-child {
+  margin-bottom: 0;
+}
+
+.vps-warning-card {
+  border-color: rgba(229,177,90,.30);
+  background: rgba(94,68,28,.18);
+}
+
+.vps-warning-card strong {
+  color: #f5cd8c;
+}
+
+.vps-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+  min-width: 0;
+  padding: 16px 3px;
+  border-bottom: 1px solid rgba(255,255,255,.085);
+}
+
+.vps-row-copy {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.vps-row-copy strong {
+  color: #eee;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.vps-row-copy p {
+  margin: 5px 0 0;
+  color: #92999d;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.vps-row select,
+.vps-form input {
+  width: 155px;
+  max-width: 45%;
+  min-width: 0;
+  min-height: 41px;
+  padding: 9px 10px;
+  border: 1px solid #41484c;
+  border-radius: 10px;
+  color: #f0f0f0;
+  background: #20262a;
+  font: inherit;
+  font-size: 12px;
+}
+
+.vps-form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.vps-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #d8dcde;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.vps-form input {
+  width: 100%;
+  max-width: 100%;
+  min-height: 45px;
+}
+
+.vps-primary-button,
+.vps-secondary-button,
+.vps-danger-button,
+.vps-file-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 41px;
+  margin: 7px 7px 0 0;
+  padding: 10px 13px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 720;
+  cursor: pointer;
+}
+
+.vps-primary-button {
+  border-color: rgba(110,155,255,.38);
+  color: #fff;
+  background: #426de0;
+}
+
+.vps-secondary-button,
+.vps-file-button {
+  border-color: #454b50;
+  color: #e5e8ea;
+  background: #252b30;
+}
+
+.vps-danger-button {
+  border-color: rgba(232,102,121,.34);
+  color: #fff;
+  background: #71313e;
+}
+
+.vps-primary-button:disabled,
+.vps-danger-button:disabled {
+  opacity: .55;
+  cursor: default;
+}
+
+.vps-file-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.vps-file-button input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.vps-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.vps-toggle input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.vps-toggle-track {
+  position: relative;
+  width: 43px;
+  height: 25px;
+  border: 1px solid #535b60;
+  border-radius: 99px;
+  background: #333a3f;
+  transition: background .18s ease;
+}
+
+.vps-toggle-track::after {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #e2e5e7;
+  content: "";
+  transition: transform .18s ease;
+}
+
+.vps-toggle input:checked + .vps-toggle-track {
+  border-color: #698df5;
+  background: #547af0;
+}
+
+.vps-toggle input:checked + .vps-toggle-track::after {
+  transform: translateX(18px);
+  background: #fff;
+}
+
+.vps-toggle input:focus-visible + .vps-toggle-track {
+  outline: 2px solid #90aaff;
+  outline-offset: 3px;
+}
+
+.vps-permission {
+  margin: 12px 0;
+  color: #a9c5ff !important;
+}
+
+.vps-storage-result,
+.vps-notice {
+  margin: 13px 0 0;
+  padding: 11px;
+  border-radius: 10px;
+  color: #c9d8ff;
+  background: rgba(82,117,210,.16);
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.vps-settings-page button:focus-visible,
+.vps-settings-page select:focus-visible,
+.vps-settings-page input:focus-visible {
+  outline: 2px solid #8ba7ff;
+  outline-offset: 3px;
+}
+
+@media (max-width: 680px) {
+  .vps-settings-page {
+    padding: 2px 1px 32px;
+  }
+
+  .vps-home-header {
+    padding: 15px 6px 12px;
+  }
+
+  .vps-home-header h1 {
+    font-size: 24px;
+  }
+
+  .vps-profile-card {
+    gap: 13px;
+    padding: 14px 7px;
+  }
+
+  .vps-profile-avatar {
+    flex-basis: 61px;
+    width: 61px;
+    height: 61px;
+  }
+
+  .vps-category-row {
+    min-height: 75px;
+    gap: 14px;
+    padding: 11px 5px;
+  }
+
+  .vps-category-icon {
+    flex-basis: 43px;
+    width: 43px;
+    height: 43px;
+  }
+
+  .vps-category-copy strong {
+    font-size: 14px;
+  }
+
+  .vps-category-copy small {
+    font-size: 11px;
+  }
+
+  .vps-detail-header {
+    padding: 13px 2px;
+  }
+
+  .vps-detail-content {
+    padding-right: 2px;
+    padding-left: 2px;
+  }
+
+  .vps-info-card,
+  .vps-warning-card {
+    padding: 14px;
+  }
+
+  .vps-row {
+    gap: 9px;
+  }
+
+  .vps-row select {
+    width: 132px;
+    max-width: 43%;
+    font-size: 11px;
+  }
+
+  .vps-form .vps-primary-button {
+    width: 100%;
+  }
+
+  .vps-primary-button,
+  .vps-secondary-button,
+  .vps-danger-button,
+  .vps-file-button {
+    min-height: 42px;
+  }
+}
+
+.messenger[data-vex-theme="light"] .vps-settings-page {
+  color: #17212a;
+}
+
+.messenger[data-vex-theme="light"] .vps-home-header h1,
+.messenger[data-vex-theme="light"] .vps-profile-copy strong,
+.messenger[data-vex-theme="light"] .vps-category-copy strong,
+.messenger[data-vex-theme="light"] .vps-detail-title h1 {
+  color: #17212a;
+}
+
+.messenger[data-vex-theme="light"] .vps-profile-card,
+.messenger[data-vex-theme="light"] .vps-category-row {
+  color: #17212a;
+  border-color: rgba(20,35,50,.12);
+}
+
+.messenger[data-vex-theme="light"] .vps-category-copy small,
+.messenger[data-vex-theme="light"] .vps-profile-copy small,
+.messenger[data-vex-theme="light"] .vps-profile-hint {
+  color: #68737c;
+}
+
+.messenger[data-vex-theme="light"] .vps-detail-header {
+  background: #f7f9fc;
+}
+
+.messenger[data-vex-theme="light"] .vps-info-card,
+.messenger[data-vex-theme="light"] .vps-warning-card {
+  background: #fff;
+  border-color: #dce3e9;
+}
+
+.messenger[data-vex-theme="light"] .vps-info-card h3,
+.messenger[data-vex-theme="light"] .vps-row-copy strong {
+  color: #17212a;
+}
+
+.messenger[data-vex-theme="light"] .vps-info-card p,
+.messenger[data-vex-theme="light"] .vps-row-copy p {
+  color: #65717a;
+}
+
+
+
+/* ============================================================
+   VEXAPP_SETTINGS_LIQUID_GLASS_HEADER_V1
+   iOS-inspired frosted glass detail header
+   ============================================================ */
+
+.vps-detail-header {
+  position: sticky !important;
+  top: 7px !important;
+  z-index: 30 !important;
+
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+
+  width: calc(100% - 4px) !important;
+  min-width: 0 !important;
+  margin: 7px auto 20px !important;
+  padding: 13px 15px !important;
+
+  overflow: hidden !important;
+  isolation: isolate !important;
+
+  border: 1px solid rgba(220, 242, 255, 0.17) !important;
+  border-radius: 23px !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.095),
+      rgba(255, 255, 255, 0.025) 48%,
+      rgba(110, 175, 210, 0.055)
+    ) !important;
+
+  background-color: rgba(13, 23, 31, 0.43) !important;
+
+  -webkit-backdrop-filter:
+    blur(30px) saturate(185%) brightness(1.08) !important;
+  backdrop-filter:
+    blur(30px) saturate(185%) brightness(1.08) !important;
+
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -1px 0 rgba(190, 225, 245, 0.07) !important;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Refleksi cahaya di permukaan kaca. */
+.vps-detail-header::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+
+  background:
+    radial-gradient(
+      ellipse at 12% 0%,
+      rgba(255, 255, 255, 0.17),
+      transparent 48%
+    ),
+    linear-gradient(
+      115deg,
+      rgba(255, 255, 255, 0.045),
+      transparent 42%,
+      rgba(115, 194, 235, 0.055)
+    );
+
+  opacity: 0.95;
+}
+
+/* Tombol kembali menjadi glass button. */
+.vps-detail-header .vps-back-button {
+  position: relative !important;
+  z-index: 2 !important;
+
+  display: grid !important;
+  flex: 0 0 42px !important;
+
+  width: 42px !important;
+  height: 42px !important;
+
+  place-items: center !important;
+  padding: 0 !important;
+
+  border: 1px solid rgba(220, 242, 255, 0.17) !important;
+  border-radius: 15px !important;
+
+  color: #f5fbff !important;
+
+  background: rgba(255, 255, 255, 0.075) !important;
+  background-color: rgba(255, 255, 255, 0.075) !important;
+
+  -webkit-backdrop-filter: blur(16px) saturate(165%);
+  backdrop-filter: blur(16px) saturate(165%);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 3px 12px rgba(0, 0, 0, 0.10) !important;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease !important;
+}
+
+.vps-detail-header .vps-back-button:active {
+  transform: scale(0.92) !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Area judul tetap sejajar dan tidak terpotong. */
+.vps-detail-header .vps-detail-title {
+  position: relative;
+  z-index: 2;
+
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  padding: 1px 0 !important;
+}
+
+.vps-detail-header .vps-detail-title > span {
+  display: inline-flex !important;
+  align-items: center !important;
+
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin-bottom: 3px !important;
+  padding: 4px 8px !important;
+
+  border: 1px solid rgba(220, 242, 255, 0.12) !important;
+  border-radius: 999px !important;
+
+  color: rgba(214, 232, 244, 0.72) !important;
+  background: rgba(255, 255, 255, 0.055) !important;
+
+  font-size: 8px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.15em !important;
+}
+
+.vps-detail-header .vps-detail-title h1 {
+  margin: 2px 0 3px !important;
+
+  color: #f8fbff !important;
+  font-size: clamp(19px, 4.8vw, 23px) !important;
+  font-weight: 780 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.vps-detail-header .vps-detail-title p {
+  margin: 0 !important;
+
+  color: rgba(222, 232, 239, 0.66) !important;
+  font-size: 11px !important;
+  line-height: 1.5 !important;
+}
+
+/* Light theme */
+.messenger[data-vex-theme="light"] .vps-detail-header {
+  border-color: rgba(55, 85, 110, 0.16) !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.76),
+      rgba(255, 255, 255, 0.43)
+    ) !important;
+
+  background-color: rgba(245, 250, 255, 0.52) !important;
+
+  -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+  backdrop-filter: blur(30px) saturate(180%) !important;
+
+  box-shadow:
+    0 12px 28px rgba(35, 65, 90, 0.075),
+    inset 0 1px 0 rgba(255, 255, 255, 0.88) !important;
+}
+
+.messenger[data-vex-theme="light"] .vps-detail-header .vps-back-button {
+  color: #243747 !important;
+  border-color: rgba(60, 90, 115, 0.14) !important;
+  background: rgba(255, 255, 255, 0.46) !important;
+}
+
+.messenger[data-vex-theme="light"] .vps-detail-header .vps-detail-title > span {
+  color: #668092 !important;
+  border-color: rgba(70, 100, 125, 0.12) !important;
+  background: rgba(255, 255, 255, 0.42) !important;
+}
+
+.messenger[data-vex-theme="light"] .vps-detail-header .vps-detail-title h1 {
+  color: #172b3b !important;
+}
+
+.messenger[data-vex-theme="light"] .vps-detail-header .vps-detail-title p {
+  color: #637987 !important;
+}
+
+/* Mobile tuning */
+@media (max-width: 680px) {
+  .vps-detail-header {
+    top: 5px !important;
+    width: calc(100% - 2px) !important;
+    gap: 12px !important;
+    margin: 5px auto 17px !important;
+    padding: 12px 12px !important;
+
+    border-radius: 21px !important;
+
+    -webkit-backdrop-filter:
+      blur(28px) saturate(185%) brightness(1.08) !important;
+    backdrop-filter:
+      blur(28px) saturate(185%) brightness(1.08) !important;
+  }
+
+  .vps-detail-header .vps-back-button {
+    flex-basis: 40px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 14px !important;
+  }
+
+  .vps-detail-header .vps-detail-title h1 {
+    font-size: 20px !important;
+  }
+
+  .vps-detail-header .vps-detail-title p {
+    font-size: 10px !important;
+  }
+}
+
+/* Respect accessibility preferences. */
+@media (prefers-reduced-motion: reduce) {
+  .vps-detail-header .vps-back-button {
+    transition: none !important;
+  }
+}
+
+/* VEXAPP_SETTINGS_LIQUID_GLASS_HEADER_V1_END */
+
+
+
+/* VEXAPP_HELP_CENTER_CSS_V1 */
+
+.vps-help-center {
+  display: grid;
+  gap: 18px;
+  padding-bottom: 28px;
+}
+
+.vph-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 24px 19px;
+  border: 1px solid rgba(63,184,255,.25);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 90% 0%,rgba(34,211,238,.2),transparent 38%),
+    linear-gradient(125deg,#102c58,#071c34 65%,#062b39);
+}
+
+.vph-hero-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  margin-bottom: 16px;
+  border: 1px solid rgba(103,232,249,.35);
+  border-radius: 14px;
+  background: linear-gradient(145deg,#2563eb,#0891b2);
+  color: white;
+  font-size: 22px;
+}
+
+.vph-hero > span,
+.vph-section-title > div > span {
+  color: #67e8f9;
+  font-size: 9px;
+  font-weight: 850;
+  letter-spacing: 1.6px;
+}
+
+.vph-hero h2 {
+  margin: 7px 0 8px;
+  color: #f2fbff;
+  font-size: clamp(23px,5vw,29px);
+}
+
+.vph-hero p {
+  max-width: 420px;
+  margin: 0;
+  color: #b7d7ed;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.vph-hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 17px;
+}
+
+.vph-hero-pills span {
+  padding: 6px 9px;
+  border: 1px solid rgba(103,232,249,.2);
+  border-radius: 20px;
+  background: rgba(4,18,38,.35);
+  color: #b8e8f4;
+  font-size: 9px;
+}
+
+.vph-section {
+  min-width: 0;
+  padding: 17px;
+  border: 1px solid rgba(92,157,204,.15);
+  border-radius: 16px;
+  background: linear-gradient(145deg,rgba(15,29,47,.94),rgba(8,18,30,.97));
+}
+
+.vph-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.vph-section-title h3 {
+  margin: 5px 0 4px;
+  color: #edf8ff;
+  font-size: 15px;
+}
+
+.vph-section-title p {
+  margin: 0;
+  color: #8297aa;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.vph-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 9px;
+}
+
+.vph-category {
+  display: grid;
+  min-width: 0;
+  gap: 7px;
+  padding: 12px;
+  border: 1px solid rgba(92,157,204,.15);
+  border-radius: 13px;
+  background: linear-gradient(140deg,#10243b,#0a1a2b);
+  color: #e9f7ff;
+  text-align: left;
+}
+
+.vph-category-active,
+.vph-category:hover {
+  border-color: rgba(34,211,238,.48);
+  background: linear-gradient(135deg,rgba(37,99,235,.24),rgba(6,182,212,.12));
+}
+
+.vph-category-icon {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  place-items: center;
+  border: 1px solid rgba(103,232,249,.2);
+  border-radius: 10px;
+  background: rgba(37,99,235,.2);
+  color: #67e8f9;
+  font-size: 16px;
+}
+
+.vph-category strong { color: #e8f6ff; font-size: 11px; }
+.vph-category small { color: #849cb4; font-size: 9px; line-height: 1.5; }
+
+.vph-search {
+  margin-bottom: 10px;
+  border-color: rgba(103,170,216,.2) !important;
+  background: #071626 !important;
+}
+
+.vph-faq-list { display: grid; gap: 8px; }
+
+.vph-faq {
+  padding: 12px;
+  border: 1px solid rgba(92,157,204,.13);
+  border-radius: 11px;
+  background: rgba(6,19,33,.7);
+}
+
+.vph-faq summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #deefff;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.vph-faq summary::-webkit-details-marker { display: none; }
+.vph-faq-arrow { color: #67e8f9; }
+
+.vph-faq p {
+  margin: 10px 0 0;
+  color: #94abc0;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.vph-form { display: grid; gap: 13px; }
+
+.vph-form label {
+  display: grid;
+  gap: 7px;
+  color: #bfd2e4;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.vph-form label > small {
+  color: #6e8ba5;
+  font-size: 9px;
+  text-align: right;
+}
+
+.vph-form input,
+.vph-form textarea,
+.vph-form select,
+.vph-reply-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid rgba(103,170,216,.2);
+  border-radius: 10px;
+  background: #071626;
+  color: #eaf6ff;
+  font: inherit;
+  font-size: 11px;
+  outline: none;
+}
+
+.vph-form textarea,
+.vph-reply-form textarea {
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.vph-form input:focus,
+.vph-form textarea:focus,
+.vph-form select:focus,
+.vph-reply-form textarea:focus {
+  border-color: rgba(34,211,238,.58);
+  box-shadow: 0 0 0 3px rgba(34,211,238,.08);
+}
+
+.vph-submit {
+  width: 100%;
+  justify-content: center;
+  min-height: 44px;
+  border: 1px solid rgba(103,232,249,.28);
+  border-radius: 11px;
+  background: linear-gradient(110deg,#2563eb,#087fbd 58%,#0891b2);
+  color: white;
+  font-weight: 750;
+}
+
+.vph-info {
+  padding: 12px;
+  border: 1px solid rgba(34,211,238,.2);
+  border-radius: 10px;
+  background: rgba(8,145,178,.1);
+  color: #a5eaf5;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.vph-ticket-list { display: grid; gap: 8px; }
+
+.vph-ticket {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid rgba(92,157,204,.15);
+  border-radius: 11px;
+  background: #0a1a2b;
+  color: #e9f6ff;
+  text-align: left;
+}
+
+.vph-ticket-active {
+  border-color: rgba(34,211,238,.48);
+  background: linear-gradient(115deg,rgba(37,99,235,.2),rgba(6,182,212,.1));
+}
+
+.vph-ticket-main { display: grid; min-width: 0; gap: 6px; }
+.vph-ticket-main strong { overflow-wrap: anywhere; font-size: 11px; }
+.vph-ticket-main small { color: #7f9ab4; font-size: 9px; }
+
+.vph-status {
+  flex: 0 0 auto;
+  padding: 5px 7px;
+  border: 1px solid rgba(103,178,220,.2);
+  border-radius: 7px;
+  color: #9cc5e2;
+  font-size: 8px;
+  font-weight: 800;
+}
+
+.vph-status-new { color: #67e8f9; }
+.vph-status-in_review { color: #93c5fd; }
+.vph-status-waiting_user { color: #fcd34d; }
+.vph-status-resolved { color: #6ee7b7; }
+.vph-status-rejected { color: #fca5a5; }
+
+.vph-empty {
+  padding: 20px 10px;
+  color: #8199b1;
+  font-size: 10px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.vph-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 12px 0;
+}
+
+.vph-message {
+  width: fit-content;
+  max-width: 88%;
+  padding: 11px;
+  border: 1px solid rgba(103,170,216,.17);
+  border-radius: 12px 12px 12px 4px;
+  background: #10243a;
+}
+
+.vph-message-user {
+  align-self: flex-end;
+  border-color: rgba(34,211,238,.23);
+  border-radius: 12px 12px 4px 12px;
+  background: linear-gradient(135deg,rgba(37,99,235,.25),rgba(6,182,212,.15));
+}
+
+.vph-message > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 7px;
+  margin-bottom: 7px;
+}
+
+.vph-message strong { color: #9fe9f3; font-size: 9px; }
+.vph-message time { color: #7893ad; font-size: 8px; }
+
+.vph-message p {
+  margin: 0;
+  color: #e2f1fc;
+  font-size: 11px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.vph-reply-form { display: grid; gap: 9px; }
+.vph-reply-form button { justify-self: end; min-width: 130px; }
+
+.vph-security-note {
+  padding: 14px;
+  border: 1px solid rgba(34,211,238,.17);
+  border-radius: 12px;
+  background: rgba(8,35,49,.65);
+}
+
+.vph-security-note strong { color: #8de9f4; font-size: 11px; }
+
+.vph-security-note p {
+  margin: 6px 0 0;
+  color: #8da8bd;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+  .vph-hero { padding: 19px 15px; }
+  .vph-section { padding: 13px; }
+  .vph-category-grid { gap: 7px; }
+  .vph-category { padding: 10px; }
+  .vph-ticket { align-items: flex-start; }
+  .vph-status { white-space: nowrap; }
+  .vph-message { max-width: 94%; }
+}
+
+
+/* VEXAPP_SETTINGS_GLASS_MOTION_V2 */
+
+/* Header utama: dark glass dengan warna biru-cyan yang tetap terlihat */
+.vps-header {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(
+      112deg,
+      rgba(2, 7, 15, .95) 0%,
+      rgba(3, 16, 30, .92) 58%,
+      rgba(0, 181, 217, .20) 100%
+    ) !important;
+  border-bottom: 1px solid rgba(89, 224, 255, .22) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(155%);
+  backdrop-filter: blur(22px) saturate(155%);
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, .30),
+    inset 0 1px 0 rgba(255, 255, 255, .055);
+}
+
+/* Judul kategori seperti Privasi, Chat, dan Notifikasi */
+.vps-section-heading {
+  position: relative;
+  isolation: isolate;
+  padding: 12px 14px !important;
+  border: 1px solid rgba(82, 216, 255, .16) !important;
+  border-radius: 16px;
+  background:
+    linear-gradient(
+      115deg,
+      rgba(2, 8, 17, .94),
+      rgba(4, 19, 34, .91) 62%,
+      rgba(0, 190, 220, .17)
+    ) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  backdrop-filter: blur(20px) saturate(150%);
+  box-shadow:
+    0 9px 24px rgba(0, 0, 0, .23),
+    inset 0 1px 0 rgba(255, 255, 255, .055);
+}
+
+.vps-section-heading h3 {
+  color: #e6faff;
+  text-shadow: 0 0 16px rgba(0, 207, 255, .12);
+}
+
+.vps-section-heading .vps-sync-status {
+  color: rgba(191, 231, 244, .72);
+}
+
+/* Animasi pergantian panel Pengaturan */
+.vps-content {
+  transform-origin: top center;
+  animation: vexSettingsPanelEnterV2 .42s cubic-bezier(.2, .8, .2, 1) both;
+}
+
+.vps-nav-item {
+  transition:
+    transform .22s cubic-bezier(.2, .8, .2, 1),
+    border-color .24s ease,
+    background .24s ease,
+    box-shadow .26s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.vps-nav-item:active {
+  transform: scale(.965);
+}
+
+.vps-nav-item.is-active {
+  animation: vexSettingsTabSelectV2 .40s cubic-bezier(.2, 1.35, .35, 1) both;
+  border-color: rgba(64, 221, 255, .36) !important;
+  box-shadow:
+    0 0 20px rgba(0, 194, 255, .12),
+    inset 0 1px 0 rgba(255, 255, 255, .08);
+}
+
+.vps-nav-item.is-active .vps-initials {
+  animation: vexSettingsInitialPopV2 .38s cubic-bezier(.2, 1.4, .35, 1) both;
+}
+
+@keyframes vexSettingsPanelEnterV2 {
+  0% {
+    opacity: 0;
+    transform: translate3d(12px, 7px, 0) scale(.988);
+    filter: blur(4px);
+  }
+  65% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes vexSettingsTabSelectV2 {
+  0% { transform: scale(.96) translateX(-3px); }
+  58% { transform: scale(1.025) translateX(1px); }
+  100% { transform: scale(1) translateX(0); }
+}
+
+@keyframes vexSettingsInitialPopV2 {
+  0% { transform: scale(.78) rotate(-9deg); }
+  70% { transform: scale(1.12) rotate(3deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vps-content,
+  .vps-nav-item.is-active,
+  .vps-nav-item.is-active .vps-initials {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* VEXAPP_SETTINGS_DARK_GLASS_V3 */
+
+/* Header modal Pengaturan */
+.vps-dialog > .vps-header,
+.vps-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  isolation: isolate;
+  background:
+    linear-gradient(
+      112deg,
+      rgba(2, 7, 16, .96) 0%,
+      rgba(3, 18, 34, .94) 58%,
+      rgba(0, 177, 215, .24) 100%
+    ) !important;
+  border-bottom: 1px solid rgba(73, 219, 255, .24) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(160%) !important;
+  backdrop-filter: blur(24px) saturate(160%) !important;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, .34),
+    inset 0 1px 0 rgba(255, 255, 255, .06) !important;
+}
+
+/* Header bagian Privasi, Chat, Akun, dan kategori lainnya */
+.vps-content .vps-section-heading {
+  position: relative;
+  z-index: 2;
+  isolation: isolate;
+  padding: 13px 15px !important;
+  margin-bottom: 17px;
+  border: 1px solid rgba(70, 218, 255, .19) !important;
+  border-radius: 16px !important;
+  background:
+    linear-gradient(
+      115deg,
+      rgba(2, 7, 16, .96) 0%,
+      rgba(3, 17, 32, .94) 62%,
+      rgba(0, 184, 220, .20) 100%
+    ) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(155%) !important;
+  backdrop-filter: blur(22px) saturate(155%) !important;
+  box-shadow:
+    0 9px 25px rgba(0, 0, 0, .28),
+    inset 0 1px 0 rgba(255, 255, 255, .06) !important;
+}
+
+.vps-section-heading h3 {
+  color: #e6faff !important;
+  text-shadow: 0 0 17px rgba(0, 207, 255, .15);
+}
+
+.vps-section-heading .vps-sync-status {
+  color: rgba(194, 235, 247, .76) !important;
+}
+
+
+/* VEXAPP_SETTINGS_TAB_MOTION_V3 */
+
+.vps-content {
+  transform-origin: top center;
+}
+
+.vps-content--account {
+  animation: vexSettingsAccountIn .42s cubic-bezier(.2,.8,.2,1) both;
+}
+.vps-content--privacy {
+  animation: vexSettingsPrivacyIn .46s cubic-bezier(.2,.8,.2,1) both;
+}
+.vps-content--personalize {
+  animation: vexSettingsPersonalizeIn .44s cubic-bezier(.2,.8,.2,1) both;
+}
+.vps-content--chat {
+  animation: vexSettingsChatIn .42s cubic-bezier(.2,.8,.2,1) both;
+}
+.vps-content--notifications {
+  animation: vexSettingsNotifyIn .44s cubic-bezier(.2,.8,.2,1) both;
+}
+.vps-content--data,
+.vps-content--language,
+.vps-content--about {
+  animation: vexSettingsGeneralIn .42s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.vps-nav-item {
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    transform .2s cubic-bezier(.2,.8,.2,1),
+    background .24s ease,
+    border-color .24s ease,
+    box-shadow .24s ease;
+}
+
+.vps-nav-item:active {
+  transform: scale(.95);
+}
+
+.vps-nav-item.is-active {
+  animation: vexSettingsButtonPop .38s cubic-bezier(.2,1.4,.35,1) both;
+  border-color: rgba(66, 221, 255, .4) !important;
+  box-shadow:
+    0 0 20px rgba(0, 194, 255, .14),
+    inset 0 1px 0 rgba(255,255,255,.09);
+}
+
+.vps-nav-item.is-active .vps-initials {
+  animation: vexSettingsIconPop .4s cubic-bezier(.2,1.4,.35,1) both;
+}
+
+@keyframes vexSettingsAccountIn {
+  from { opacity: 0; transform: translateX(-13px) scale(.985); filter: blur(4px); }
+  to { opacity: 1; transform: translateX(0) scale(1); filter: blur(0); }
+}
+@keyframes vexSettingsPrivacyIn {
+  from { opacity: 0; transform: translateX(17px); clip-path: inset(0 0 0 18%); }
+  to { opacity: 1; transform: translateX(0); clip-path: inset(0); }
+}
+@keyframes vexSettingsPersonalizeIn {
+  from { opacity: 0; transform: translateY(13px) scale(.98); filter: blur(3px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+}
+@keyframes vexSettingsChatIn {
+  from { opacity: 0; transform: scale(.965); filter: blur(5px); }
+  70% { opacity: 1; transform: scale(1.008); filter: blur(0); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes vexSettingsNotifyIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  65% { opacity: 1; transform: translateY(3px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes vexSettingsGeneralIn {
+  from { opacity: 0; transform: translateY(9px) scale(.99); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes vexSettingsButtonPop {
+  0% { transform: scale(.96); }
+  65% { transform: scale(1.025); }
+  100% { transform: scale(1); }
+}
+@keyframes vexSettingsIconPop {
+  0% { transform: scale(.78) rotate(-10deg); }
+  70% { transform: scale(1.13) rotate(4deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vps-content,
+  .vps-nav-item,
+  .vps-nav-item.is-active,
+  .vps-nav-item.is-active .vps-initials {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* VEXAPP_SETTINGS_REAL_DETAIL_GLASS_V6 */
+
+/* Header yang benar-benar tampil saat membuka Privasi/Akun/Chat */
+.vps-detail-view > .vps-detail-header,
+.vps-detail-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 60 !important;
+  isolation: isolate;
+  background:
+    linear-gradient(
+      112deg,
+      rgba(2, 8, 17, .76) 0%,
+      rgba(3, 18, 34, .72) 58%,
+      rgba(0, 175, 215, .20) 100%
+    ) !important;
+  border-bottom: 1px solid rgba(79, 218, 255, .24) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(165%) brightness(.86) !important;
+  backdrop-filter: blur(30px) saturate(165%) brightness(.86) !important;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, .30),
+    inset 0 1px 0 rgba(255, 255, 255, .06) !important;
+}
+
+.vps-detail-header h1,
+.vps-detail-header h2,
+.vps-detail-header h3,
+.vps-detail-header strong {
+  color: #e9faff !important;
+}
+
+.vps-detail-header p,
+.vps-detail-header small {
+  color: rgba(191, 226, 241, .78) !important;
+}
+
+.vps-detail-header .vps-back-button {
+  border-color: rgba(83, 215, 255, .22) !important;
+  background: rgba(3, 19, 34, .54) !important;
+  color: #c9f5ff !important;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* Help Center: pintasan ringkas */
+.vph-shortcut-menu {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 4px;
+}
+
+.vph-shortcut-menu button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 12px 10px;
+  border: 1px solid rgba(75, 211, 247, .20);
+  border-radius: 14px;
+  color: #e9faff;
+  text-align: left;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(3, 10, 21, .88),
+      rgba(4, 27, 46, .82) 65%,
+      rgba(0, 172, 215, .16)
+    );
+  -webkit-backdrop-filter: blur(16px) saturate(145%);
+  backdrop-filter: blur(16px) saturate(145%);
+  box-shadow:
+    0 7px 18px rgba(0, 0, 0, .18),
+    inset 0 1px 0 rgba(255, 255, 255, .05);
+  cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.vph-shortcut-menu button:active {
+  transform: scale(.97);
+}
+
+.vph-shortcut-menu button > span:nth-child(2) {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+  gap: 4px;
+}
+
+.vph-shortcut-menu strong {
+  color: #e9faff;
+  font-size: 12px;
+}
+
+.vph-shortcut-menu small {
+  color: #9dbbca;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.vph-shortcut-icon {
+  display: grid;
+  flex: 0 0 33px;
+  width: 33px;
+  height: 33px;
+  place-items: center;
+  border: 1px solid rgba(75, 217, 255, .25);
+  border-radius: 10px;
+  color: #91edff;
+  background: rgba(0, 188, 229, .13);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.vph-shortcut-arrow {
+  color: #75dff5;
+  font-size: 21px;
+}
+
+/* Animasi ketika membuka kategori Pengaturan */
+.vps-detail-view[data-category="account"] {
+  animation: vexDetailAccountV6 .38s ease both;
+}
+
+.vps-detail-view[data-category="privacy"] {
+  animation: vexDetailPrivacyV6 .42s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.vps-detail-view[data-category="chat"] {
+  animation: vexDetailChatV6 .4s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.vps-detail-view[data-category="help-center"] {
+  animation: vexDetailHelpV6 .44s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.vps-detail-view[data-category="personalize"],
+.vps-detail-view[data-category="notifications"],
+.vps-detail-view[data-category="data"],
+.vps-detail-view[data-category="accessibility"],
+.vps-detail-view[data-category="language"],
+.vps-detail-view[data-category="about"],
+.vps-detail-view[data-category="invite"] {
+  animation: vexDetailGeneralV6 .4s cubic-bezier(.2,.8,.2,1) both;
+}
+
+@keyframes vexDetailAccountV6 {
+  from { opacity: 0; transform: translateX(-12px); filter: blur(3px); }
+  to { opacity: 1; transform: translateX(0); filter: blur(0); }
+}
+
+@keyframes vexDetailPrivacyV6 {
+  from { opacity: 0; transform: translateX(15px) scale(.985); }
+  70% { opacity: 1; transform: translateX(-2px) scale(1.004); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
+}
+
+@keyframes vexDetailChatV6 {
+  from { opacity: 0; transform: scale(.97); filter: blur(3px); }
+  70% { opacity: 1; transform: scale(1.008); filter: blur(0); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes vexDetailHelpV6 {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes vexDetailGeneralV6 {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Kolom kode aktivasi: huruf + angka */
+.activation-input-card input[data-activation-code-input="true"] {
+  input-mode: search;
+  letter-spacing: 1.4px;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+@media (max-width: 560px) {
+  .vph-shortcut-menu {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vps-detail-view,
+  .vph-shortcut-menu button {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+
+/* VEXAPP_UNIVERSAL_FROSTED_HEADERS_V7 */
+
+/* Permukaan header dibuat transparan agar lapisan blur bekerja. */
+.vps-settings-page .vps-detail-header,
+.vps-settings-page .vps-home-header,
+.vps-settings-page .vps-section-heading,
+.vps-settings-page .vps-content .vps-section-heading,
+.vps-dialog > .vps-header,
+.vps-settings-page .vps-header {
+  position: relative;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(112, 220, 255, .22) !important;
+  border-radius: 22px !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, .30),
+    inset 0 1px 0 rgba(255, 255, 255, .10),
+    inset 0 -1px 0 rgba(65, 192, 255, .08) !important;
+}
+
+/* Header detail tetap sticky saat halaman digulir. */
+.vps-settings-page .vps-detail-header {
+  position: sticky !important;
+  top: 5px !important;
+  z-index: 60 !important;
+  width: calc(100% - 4px) !important;
+  margin: 7px auto 20px !important;
+  padding: 13px 15px !important;
+}
+
+/* Header utama tetap menjadi panel kaca, bukan sekadar teks. */
+.vps-settings-page .vps-home-header {
+  padding: 17px 16px !important;
+  margin: 5px 0 17px !important;
+}
+
+/* Lapisan kaca berada DI ATAS background header dan memburamkan
+   seluruh area di belakang permukaannya. */
+.vps-settings-page .vps-detail-header::before,
+.vps-settings-page .vps-home-header::before,
+.vps-settings-page .vps-section-heading::before,
+.vps-settings-page .vps-content .vps-section-heading::before,
+.vps-dialog > .vps-header::before,
+.vps-settings-page .vps-header::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  border-radius: inherit !important;
+  background:
+    linear-gradient(
+      112deg,
+      rgba(2, 8, 18, .42) 0%,
+      rgba(3, 17, 33, .37) 55%,
+      rgba(0, 174, 218, .20) 100%
+    ),
+    radial-gradient(
+      ellipse at 12% 0%,
+      rgba(255, 255, 255, .16),
+      transparent 60%
+    ) !important;
+  -webkit-backdrop-filter:
+    blur(36px) saturate(190%) brightness(.82) !important;
+  backdrop-filter:
+    blur(36px) saturate(190%) brightness(.82) !important;
+}
+
+/* Semua isi header tampil di atas lapisan kaca. */
+.vps-settings-page .vps-detail-header > *,
+.vps-settings-page .vps-home-header > *,
+.vps-settings-page .vps-section-heading > *,
+.vps-settings-page .vps-content .vps-section-heading > *,
+.vps-dialog > .vps-header > *,
+.vps-settings-page .vps-header > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Pastikan judul tetap terbaca di atas dark glass. */
+.vps-settings-page .vps-detail-header .vps-detail-title h1,
+.vps-settings-page .vps-home-header h1,
+.vps-settings-page .vps-section-heading h3 {
+  color: #effaff !important;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, .24);
+}
+
+/* Override juga aturan khusus tema terang agar efek kaca konsisten. */
+.messenger[data-vex-theme="light"] .vps-settings-page .vps-detail-header,
+.messenger[data-vex-theme="light"] .vps-settings-page .vps-home-header,
+.messenger[data-vex-theme="light"] .vps-settings-page .vps-section-heading {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-color: rgba(112, 220, 255, .22) !important;
+}
+
+.messenger[data-vex-theme="light"] .vps-settings-page .vps-detail-header::before,
+.messenger[data-vex-theme="light"] .vps-settings-page .vps-home-header::before,
+.messenger[data-vex-theme="light"] .vps-settings-page .vps-section-heading::before {
+  background:
+    linear-gradient(
+      112deg,
+      rgba(2, 8, 18, .42),
+      rgba(3, 17, 33, .37) 55%,
+      rgba(0, 174, 218, .20)
+    ) !important;
+  -webkit-backdrop-filter: blur(36px) saturate(190%) brightness(.82) !important;
+  backdrop-filter: blur(36px) saturate(190%) brightness(.82) !important;
+}
+
+/* Fallback untuk browser yang tidak mendukung backdrop-filter. */
+@supports not ((backdrop-filter: blur(2px)) or (-webkit-backdrop-filter: blur(2px))) {
+  .vps-settings-page .vps-detail-header,
+  .vps-settings-page .vps-home-header,
+  .vps-settings-page .vps-section-heading {
+    background: rgba(5, 14, 27, .94) !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .vps-settings-page .vps-detail-header {
+    top: 5px !important;
+    width: calc(100% - 2px) !important;
+    margin: 5px auto 17px !important;
+    padding: 13px 12px !important;
+    border-radius: 22px !important;
+  }
+
+  .vps-settings-page .vps-home-header {
+    border-radius: 20px !important;
+  }
+}
+
+
+/* VEXAPP_LIQUID_GLASS_INTENSE_V8 */
+
+/* Semua header Pengaturan */
+.vps-settings-page .vps-detail-header,
+.vps-settings-page .vps-home-header,
+.vps-settings-page .vps-section-heading,
+.vps-settings-page .vps-content .vps-section-heading,
+.vps-dialog > .vps-header,
+.vps-settings-page .vps-header {
+  position: relative !important;
+  isolation: isolate !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  background-color: rgba(3, 9, 19, .16) !important;
+  border: 1px solid rgba(139, 222, 255, .25) !important;
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, .32),
+    inset 0 1px 0 rgba(255, 255, 255, .13),
+    inset 0 -1px 0 rgba(70, 193, 255, .10) !important;
+}
+
+/* Lapisan utama frosted glass */
+.vps-settings-page .vps-detail-header::before,
+.vps-settings-page .vps-home-header::before,
+.vps-settings-page .vps-section-heading::before,
+.vps-settings-page .vps-content .vps-section-heading::before,
+.vps-dialog > .vps-header::before,
+.vps-settings-page .vps-header::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  border-radius: inherit !important;
+
+  background:
+    linear-gradient(
+      118deg,
+      rgba(0, 0, 0, .39) 0%,
+      rgba(2, 11, 23, .32) 48%,
+      rgba(0, 113, 151, .19) 100%
+    ),
+    radial-gradient(
+      ellipse at 14% 0%,
+      rgba(255, 255, 255, .19),
+      transparent 58%
+    ) !important;
+
+  -webkit-backdrop-filter:
+    blur(48px) saturate(185%) brightness(.78) contrast(1.04) !important;
+  backdrop-filter:
+    blur(48px) saturate(185%) brightness(.78) contrast(1.04) !important;
+}
+
+/* Pantulan cahaya tipis khas liquid glass */
+.vps-settings-page .vps-detail-header::after,
+.vps-settings-page .vps-home-header::after,
+.vps-settings-page .vps-section-heading::after,
+.vps-settings-page .vps-content .vps-section-heading::after,
+.vps-dialog > .vps-header::after,
+.vps-settings-page .vps-header::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  border-radius: inherit !important;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, .09) 0%,
+      transparent 34%,
+      transparent 75%,
+      rgba(55, 202, 255, .07) 100%
+    ) !important;
+}
+
+/* Pastikan teks dan tombol berada di atas lapisan kaca */
+.vps-settings-page .vps-detail-header > *,
+.vps-settings-page .vps-home-header > *,
+.vps-settings-page .vps-section-heading > *,
+.vps-settings-page .vps-content .vps-section-heading > *,
+.vps-dialog > .vps-header > *,
+.vps-settings-page .vps-header > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tampilan header detail tetap konsisten di semua kategori */
+.vps-settings-page .vps-detail-header {
+  position: sticky !important;
+  top: 5px !important;
+  z-index: 60 !important;
+  border-radius: 23px !important;
+}
+
+/* Tema terang tetap menggunakan dark liquid glass sesuai desain VexApp */
+.messenger[data-vex-theme="light"] .vps-settings-page .vps-detail-header,
+.messenger[data-vex-theme="light"] .vps-settings-page .vps-home-header,
+.messenger[data-vex-theme="light"] .vps-settings-page .vps-section-heading {
+  background: transparent !important;
+  background-color: rgba(3, 9, 19, .16) !important;
+}
+
+@media (max-width: 680px) {
+  .vps-settings-page .vps-detail-header {
+    border-radius: 22px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vps-settings-page .vps-detail-header,
+  .vps-settings-page .vps-home-header,
+  .vps-settings-page .vps-section-heading {
+    transition: none !important;
+  }
+}
+
+
+/* VEXAPP_HOME_HEADER_RESTORE_V9 */
+
+/* Kembalikan header utama ke desain lama: full-width, bukan kartu. */
+.vps-settings-page .vps-home-view > .vps-home-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+
+  display: block !important;
+  width: calc(100% + 4px) !important;
+  margin: -4px -2px 17px !important;
+  padding: 18px 18px 26px !important;
+
+  border: 0 !important;
+  border-bottom: 1px solid rgba(130, 213, 245, .12) !important;
+  border-radius: 0 0 36px 36px !important;
+
+  overflow: visible !important;
+  background:
+    linear-gradient(
+      112deg,
+      #142235 0%,
+      #0c1c2c 56%,
+      #082a35 100%
+    ) !important;
+
+  box-shadow: none !important;
+  -webkit-backdrop-filter: blur(16px) saturate(130%) !important;
+  backdrop-filter: blur(16px) saturate(130%) !important;
+}
+
+/* Hilangkan lapisan yang sebelumnya membuat header menjadi kartu kaca. */
+.vps-settings-page .vps-home-view > .vps-home-header::before,
+.vps-settings-page .vps-home-view > .vps-home-header::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Kembalikan jarak dan tampilan judul seperti desain sebelumnya. */
+.vps-settings-page .vps-home-view > .vps-home-header .vps-eyebrow {
+  color: #91e7f5 !important;
+}
+
+.vps-settings-page .vps-home-view > .vps-home-header h1 {
+  margin: 5px 0 0 !important;
+  color: #f5f8ff !important;
+}
+
+/* Penyesuaian layar HP. */
+@media (max-width: 680px) {
+  .vps-settings-page .vps-home-view > .vps-home-header {
+    width: calc(100% + 2px) !important;
+    margin: -2px -1px 17px !important;
+    padding: 18px 17px 26px !important;
+    border-radius: 0 0 36px 36px !important;
+  }
+}
+
+
+/* VEXAPP_GLOBAL_FROSTED_HEADERS_V10 */
+
+/*
+ * Universal dark liquid glass.
+ * Hanya mengubah permukaan visual, tidak mengubah layout/ukuran/posisi.
+ */
+.messenger header,
+.messenger [role="banner"],
+.messenger [class*="-header"],
+.messenger [class^="header"],
+.messenger [class*=" header"],
+.messenger [class*="__header"],
+.messenger [class*="_header"],
+.messenger [class*="Header"],
+.messenger .vps-section-heading {
+  background:
+    linear-gradient(
+      112deg,
+      rgba(2, 8, 18, .54) 0%,
+      rgba(3, 17, 33, .46) 56%,
+      rgba(0, 157, 193, .20) 100%
+    ) !important;
+
+  -webkit-backdrop-filter:
+    blur(36px) saturate(185%) brightness(.88) !important;
+  backdrop-filter:
+    blur(36px) saturate(185%) brightness(.88) !important;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .075) !important;
+}
+
+/* Override tema terang agar efek kaca tetap konsisten. */
+.messenger[data-vex-theme="light"] header,
+.messenger[data-vex-theme="light"] [role="banner"],
+.messenger[data-vex-theme="light"] [class*="-header"],
+.messenger[data-vex-theme="light"] [class^="header"],
+.messenger[data-vex-theme="light"] [class*=" header"],
+.messenger[data-vex-theme="light"] [class*="__header"],
+.messenger[data-vex-theme="light"] [class*="_header"],
+.messenger[data-vex-theme="light"] [class*="Header"],
+.messenger[data-vex-theme="light"] .vps-section-heading {
+  background:
+    linear-gradient(
+      112deg,
+      rgba(2, 8, 18, .54) 0%,
+      rgba(3, 17, 33, .46) 56%,
+      rgba(0, 157, 193, .20) 100%
+    ) !important;
+
+  -webkit-backdrop-filter:
+    blur(36px) saturate(185%) brightness(.88) !important;
+  backdrop-filter:
+    blur(36px) saturate(185%) brightness(.88) !important;
+}
+
+
+/* VEXAPP_HELP_CENTER_OPEN_TOP_PERF_V1 */
+
+/* Buka Pusat Bantuan tanpa mewarisi posisi scroll sebelumnya. */
+.vps-detail-view[data-category="help-center"] {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  scroll-margin-top: 0 !important;
+}
+
+/* Hilangkan animasi dan transisi yang membuat menu terasa lambat. */
+.vps-detail-view[data-category="help-center"] *,
+.vps-detail-view[data-category="help-center"] *::before,
+.vps-detail-view[data-category="help-center"] *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* VEX_SUBSCRIPTION_BENEFITS_V1 — premium chat wallpaper presets. */
+.messenger[data-vex-wallpaper="aurora"] .message-history {
+  background-image:
+    radial-gradient(ellipse at 12% 8%, rgba(39, 220, 174, .16), transparent 42%),
+    radial-gradient(ellipse at 92% 18%, rgba(72, 157, 255, .16), transparent 45%),
+    radial-gradient(ellipse at 52% 100%, rgba(165, 108, 255, .13), transparent 48%),
+    linear-gradient(145deg, #071d24, #0b1425 58%, #15142b);
+}
+
+.messenger[data-vex-wallpaper="nebula"] .message-history {
+  background-image:
+    radial-gradient(circle at 18% 22%, rgba(182, 115, 255, .18) 0, transparent 32%),
+    radial-gradient(circle at 86% 76%, rgba(82, 115, 255, .18) 0, transparent 38%),
+    radial-gradient(ellipse at 50% 0%, rgba(235, 111, 198, .10), transparent 55%),
+    linear-gradient(150deg, #130d25, #10152e 58%, #080e1d);
+}
+
+.messenger[data-vex-wallpaper="obsidian"] .message-history {
+  background-image:
+    radial-gradient(ellipse at 88% 12%, rgba(255, 171, 87, .13), transparent 36%),
+    radial-gradient(ellipse at 8% 86%, rgba(151, 165, 185, .10), transparent 42%),
+    linear-gradient(145deg, #17191e, #0c1016 60%, #17130f);
+}
